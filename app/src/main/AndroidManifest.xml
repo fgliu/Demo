@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.fgliu.demo">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.FloatWindowService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.RenRenMenuActivity"
+            android:label="RenRenMenuActivity"></activity>
+        <activity
+            android:name=".ui.SliderActivity"
+            android:label="@string/title_activity_slider" />
+        <activity
+            android:name=".ui.BidirSlidingActivity"
+            android:label="@string/title_activity_bidir_sliding"></activity>
+    </application>
+
+</manifest>
