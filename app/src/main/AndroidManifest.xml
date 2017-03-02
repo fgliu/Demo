@@ -28,13 +28,16 @@
 
         <activity
             android:name=".ui.RenRenMenuActivity"
-            android:label="RenRenMenuActivity"></activity>
+            android:label="RenRenMenuActivity" />
         <activity
             android:name=".ui.SliderActivity"
             android:label="@string/title_activity_slider" />
         <activity
             android:name=".ui.BidirSlidingActivity"
-            android:label="@string/title_activity_bidir_sliding"></activity>
+            android:label="@string/title_activity_bidir_sliding" />
+        <activity
+            android:name=".ui.SlidingSwitcherActivity"
+            android:label="@string/title_activity_sliding_switcher"></activity>
     </application>
 
 </manifest>

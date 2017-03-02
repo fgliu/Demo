@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_slider">SliderActivity</string>
     <string name="title_activity_bidir_sliding">BidirSlidingActivity</string>
+    <string name="title_activity_sliding_switcher">SlidingSwitcherActivity</string>
 
 </resources>

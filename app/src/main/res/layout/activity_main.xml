@@ -15,27 +15,34 @@
         android:id="@+id/start_float_window"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Start Float Window" >
+        android:text="桌面弹窗" >
     </Button>
 
     <Button
         android:id="@+id/renren_menu_window"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="renren_menu_window" >
+        android:text="简单滑动菜单" >
     </Button>
 
     <Button
         android:id="@+id/slider_menu_window"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="slider_menu_window" >
+        android:text="通用滑动菜单" >
     </Button>
 
     <Button
         android:id="@+id/both_menu_window"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="both_menu_window" >
+        android:text="双向滑动菜单" >
+    </Button>
+
+    <Button
+        android:id="@+id/switch_menu_window"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="顶部滚动banner" >
     </Button>
 </LinearLayout>
