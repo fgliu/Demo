@@ -1,7 +1,9 @@
 package cn.fgliu.demo.view;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -10,6 +12,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 import cn.fgliu.demo.R;
 
@@ -95,6 +100,12 @@ public class SlidingSwitcherView extends RelativeLayout implements View.OnTouchL
      */
     private VelocityTracker mVelocityTracker;
 
+
+    /**
+     * 用于在定时器当中操作UI界面。
+     */
+    private Handler handler = new Handler();
+
     /**
      * 重写SlidingSwitcherView的构造函数，用于允许在XML中引用当前的自定义布局。
      *
@@ -103,6 +114,12 @@ public class SlidingSwitcherView extends RelativeLayout implements View.OnTouchL
      */
     public SlidingSwitcherView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SlidingSwitcherView);
+        boolean isAutoPlay = a.getBoolean(R.styleable.SlidingSwitcherView_auto_play, false);
+        if (isAutoPlay) {
+            startAutoPlay();
+        }
+        a.recycle();
     }
 
     /**
@@ -255,6 +272,14 @@ public class SlidingSwitcherView extends RelativeLayout implements View.OnTouchL
         return xUp - xDown > switcherViewWidth / 2 || getScrollVelocity() > SNAP_VELOCITY;
     }
 
+
+    /**
+     * 滚动到第一个元素。
+     */
+    public void scrollToFirstItem() {
+        new ScrollToFirstItemTask().execute(20 * itemsCount);
+    }
+
     /**
      * 刷新标签元素布局，每次currentItemIndex值改变的时候都应该进行刷新。
      */
@@ -311,6 +336,51 @@ public class SlidingSwitcherView extends RelativeLayout implements View.OnTouchL
         mVelocityTracker = null;
     }
 
+    /**
+     * 使当前线程睡眠指定的毫秒数。
+     *
+     * @param millis
+     *            指定当前线程睡眠多久，以毫秒为单位
+     */
+    public static void sleep(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    class ScrollToFirstItemTask extends AsyncTask<Integer, Integer, Integer> {
+
+        @Override
+        protected Integer doInBackground(Integer... speed) {
+            int leftMargin = firstItemParams.leftMargin;
+            while (true) {
+                leftMargin = leftMargin + speed[0];
+                // 当leftMargin大于0时，说明已经滚动到了第一个元素，跳出循环
+                if (leftMargin > 0) {
+                    leftMargin = 0;
+                    break;
+                }
+                publishProgress(leftMargin);
+               // sleep(20);
+            }
+            return leftMargin;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... leftMargin) {
+            firstItemParams.leftMargin = leftMargin[0];
+            firstItem.setLayoutParams(firstItemParams);
+        }
+
+        @Override
+        protected void onPostExecute(Integer leftMargin) {
+            firstItemParams.leftMargin = leftMargin;
+            firstItem.setLayoutParams(firstItemParams);
+        }
+
+    }
 
 
     class ScrollTask extends AsyncTask<Integer, Integer, Integer> {
@@ -343,19 +413,7 @@ public class SlidingSwitcherView extends RelativeLayout implements View.OnTouchL
             firstItemParams.leftMargin = leftMargin;
             firstItem.setLayoutParams(firstItemParams);
         }
-        /**
-         * 使当前线程睡眠指定的毫秒数。
-         *
-         * @param millis
-         *            指定当前线程睡眠多久，以毫秒为单位
-         */
-        private void sleep(long millis) {
-            try {
-                Thread.sleep(millis);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+
         /**
          * 检测菜单滚动时，是否有穿越border，border的值都存储在{@link #borders}中。
          *
@@ -402,5 +460,35 @@ public class SlidingSwitcherView extends RelativeLayout implements View.OnTouchL
         }
     }
 
+
+    /**
+     * 开启图片自动播放功能，当滚动到最后一张图片的时候，会自动回滚到第一张图片。
+     */
+    public void startAutoPlay() {
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                if (currentItemIndex == itemsCount - 1) {
+                    currentItemIndex = 0;
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            scrollToFirstItem();
+                            refreshDotsLayout();
+                        }
+                    });
+                } else {
+                    currentItemIndex++;
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            scrollToNext();
+                            refreshDotsLayout();
+                        }
+                    });
+                }
+            }
+        }, 3000, 3000);
+    }
 
 }
