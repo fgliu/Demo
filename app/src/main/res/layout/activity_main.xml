@@ -45,4 +45,11 @@
         android:layout_height="wrap_content"
         android:text="顶部滚动banner" >
     </Button>
+
+    <Button
+        android:id="@+id/frame_menu_window"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="碎片化" >
+    </Button>
 </LinearLayout>

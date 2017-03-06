@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import cn.fgliu.demo.service.FloatWindowService;
 import cn.fgliu.demo.ui.BidirSlidingActivity;
+import cn.fgliu.demo.ui.FragmentActivity;
 import cn.fgliu.demo.ui.RenRenMenuActivity;
 import cn.fgliu.demo.ui.SliderActivity;
 import cn.fgliu.demo.ui.SlidingSwitcherActivity;
@@ -69,6 +70,17 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, SlidingSwitcherActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 图片滚动控件，含页签功能
+        Button frameMenuWindow = (Button) findViewById(R.id.frame_menu_window);
+        frameMenuWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
                 startActivity(intent);
                 finish();
             }

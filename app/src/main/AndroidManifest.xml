@@ -37,7 +37,12 @@
             android:label="@string/title_activity_bidir_sliding" />
         <activity
             android:name=".ui.SlidingSwitcherActivity"
-            android:label="@string/title_activity_sliding_switcher"></activity>
+            android:label="@string/title_activity_sliding_switcher" />
+        <activity
+            android:name=".ui.FragmentActivity"
+            android:label="@string/title_activity_fragment" />
+        <activity android:name=".ui.SoundActivity" />
+        <activity android:name=".ui.DisplayActivity"></activity>
     </application>
 
 </manifest>
