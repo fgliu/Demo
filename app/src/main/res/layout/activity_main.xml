@@ -52,4 +52,11 @@
         android:layout_height="wrap_content"
         android:text="碎片化" >
     </Button>
+
+    <Button
+        android:id="@+id/tab_menu_window"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="底部菜单" >
+    </Button>
 </LinearLayout>
