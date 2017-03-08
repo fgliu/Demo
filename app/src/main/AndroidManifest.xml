@@ -45,7 +45,8 @@
         <activity android:name=".ui.DisplayActivity" />
         <activity
             android:name=".ui.FragmentTabActivity"
-            android:label="@string/title_activity_fragment_tab"></activity>
+            android:label="@string/title_activity_fragment_tab" />
+        <activity android:name=".ui.EntitySendActivity"></activity>
     </application>
 
 </manifest>
