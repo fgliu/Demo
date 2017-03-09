@@ -59,4 +59,11 @@
         android:layout_height="wrap_content"
         android:text="底部菜单" >
     </Button>
+
+    <Button
+        android:id="@+id/contact_menu_window_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="通讯录" >
+    </Button>
 </LinearLayout>

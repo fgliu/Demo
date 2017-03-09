@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import cn.fgliu.demo.service.FloatWindowService;
 import cn.fgliu.demo.ui.BidirSlidingActivity;
+import cn.fgliu.demo.ui.ContactActivity;
 import cn.fgliu.demo.ui.FragmentActivity;
 import cn.fgliu.demo.ui.FragmentTabActivity;
 import cn.fgliu.demo.ui.RenRenMenuActivity;
@@ -93,6 +94,17 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, FragmentTabActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 通讯录
+        Button contactWindow = (Button) findViewById(R.id.contact_menu_window_button);
+        contactWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, ContactActivity.class);
                 startActivity(intent);
                 finish();
             }
