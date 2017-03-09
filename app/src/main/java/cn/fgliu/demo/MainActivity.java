@@ -11,6 +11,7 @@ import cn.fgliu.demo.ui.BidirSlidingActivity;
 import cn.fgliu.demo.ui.ContactActivity;
 import cn.fgliu.demo.ui.FragmentActivity;
 import cn.fgliu.demo.ui.FragmentTabActivity;
+import cn.fgliu.demo.ui.RefreshActivity;
 import cn.fgliu.demo.ui.RenRenMenuActivity;
 import cn.fgliu.demo.ui.SliderActivity;
 import cn.fgliu.demo.ui.SlidingSwitcherActivity;
@@ -105,6 +106,17 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, ContactActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 下拉刷新
+        Button refreshWindow = (Button) findViewById(R.id.refresh_button);
+        refreshWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, RefreshActivity.class);
                 startActivity(intent);
                 finish();
             }
