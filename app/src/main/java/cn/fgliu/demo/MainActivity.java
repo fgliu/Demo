@@ -11,6 +11,7 @@ import cn.fgliu.demo.ui.BidirSlidingActivity;
 import cn.fgliu.demo.ui.ContactActivity;
 import cn.fgliu.demo.ui.FragmentActivity;
 import cn.fgliu.demo.ui.FragmentTabActivity;
+import cn.fgliu.demo.ui.PhotoWallActivity;
 import cn.fgliu.demo.ui.RefreshActivity;
 import cn.fgliu.demo.ui.RenRenMenuActivity;
 import cn.fgliu.demo.ui.SliderActivity;
@@ -117,6 +118,17 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, RefreshActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 照片墙
+        Button photoWindow = (Button) findViewById(R.id.photo_wall_button);
+        photoWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, PhotoWallActivity.class);
                 startActivity(intent);
                 finish();
             }

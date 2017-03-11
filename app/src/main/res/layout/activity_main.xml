@@ -73,4 +73,11 @@
         android:layout_height="wrap_content"
         android:text="下拉刷新" >
     </Button>
+
+    <Button
+        android:id="@+id/photo_wall_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="照片墙" >
+    </Button>
 </LinearLayout>

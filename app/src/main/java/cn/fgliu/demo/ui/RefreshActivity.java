@@ -30,7 +30,8 @@ public class RefreshActivity extends Activity {
             @Override
             public void onRefresh() {
                 try {
-                    Thread.sleep(3000);
+                    //实现具体的业务逻辑及数据刷新
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -52,8 +53,8 @@
             android:label="@string/title_activity_fragment_tab" />
         <activity android:name=".ui.EntitySendActivity" />
         <activity android:name=".ui.ContactActivity" />
-
-        <activity android:name=".ui.RefreshActivity"></activity>
+        <activity android:name=".ui.RefreshActivity" />
+        <activity android:name=".ui.PhotoWallActivity"></activity>
     </application>
 
 </manifest>
