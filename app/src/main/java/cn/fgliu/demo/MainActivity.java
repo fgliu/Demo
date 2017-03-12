@@ -1,8 +1,8 @@
 package cn.fgliu.demo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,13 +11,14 @@ import cn.fgliu.demo.ui.BidirSlidingActivity;
 import cn.fgliu.demo.ui.ContactActivity;
 import cn.fgliu.demo.ui.FragmentActivity;
 import cn.fgliu.demo.ui.FragmentTabActivity;
+import cn.fgliu.demo.ui.MsgActivity;
 import cn.fgliu.demo.ui.PhotoWallActivity;
 import cn.fgliu.demo.ui.RefreshActivity;
 import cn.fgliu.demo.ui.RenRenMenuActivity;
 import cn.fgliu.demo.ui.SliderActivity;
 import cn.fgliu.demo.ui.SlidingSwitcherActivity;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,5 +134,17 @@ public class MainActivity extends Activity {
                 finish();
             }
         });
+
+        // 聊天页面
+        Button chatWindow = (Button) findViewById(R.id.msg_button);
+        chatWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, MsgActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }

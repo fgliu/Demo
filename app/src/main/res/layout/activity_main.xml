@@ -80,4 +80,11 @@
         android:layout_height="wrap_content"
         android:text="照片墙" >
     </Button>
+
+    <Button
+        android:id="@+id/msg_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="聊天页面" >
+    </Button>
 </LinearLayout>
