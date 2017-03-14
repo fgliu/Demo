@@ -6,8 +6,17 @@ package cn.fgliu.demo.entity;
 
 public class Images {
 
-    public final static String[] imageThumbUrls = new String[] {
-            "https://lh6.googleusercontent.com/-55osAWw3x0Q/URquUtcFr5I/AAAAAAAAAbs/rWlj1RUKrYI/s160-c/A%252520Photographer.jpg",
+    public final static String[] imageThumbUrls = new String[]{
+
+
+            "https://image.fanhuan.com/goods/2017-03-13/537175124339.jpg",
+            "https://image.fanhuan.com/goods/2017-03-13/543747680329.jpg",
+            "https://image.fanhuan.com/goods/2017-03-11/539512909127.jpg!300.300?v=1489391419",
+            "https://image.fanhuan.com/goods/2017-03-13/528973845225.jpg!300.300?v=1489391419",
+            "https://image.fanhuan.com/goods/2017-03-13/545816281034.jpg!300.300?v=1489391419",
+            "https://image.fanhuan.com/goods/2017-03-13/544757480273.jpg!300.300?v=1489391419",
+
+           "https://lh6.googleusercontent.com/-55osAWw3x0Q/URquUtcFr5I/AAAAAAAAAbs/rWlj1RUKrYI/s160-c/A%252520Photographer.jpg",
             "https://lh4.googleusercontent.com/--dq8niRp7W4/URquVgmXvgI/AAAAAAAAAbs/-gnuLQfNnBA/s160-c/A%252520Song%252520of%252520Ice%252520and%252520Fire.jpg",
             "https://lh5.googleusercontent.com/-7qZeDtRKFKc/URquWZT1gOI/AAAAAAAAAbs/hqWgteyNXsg/s160-c/Another%252520Rockaway%252520Sunset.jpg",
             "https://lh3.googleusercontent.com/--L0Km39l5J8/URquXHGcdNI/AAAAAAAAAbs/3ZrSJNrSomQ/s160-c/Antelope%252520Butte.jpg",
@@ -105,5 +114,11 @@ public class Images {
             "https://lh5.googleusercontent.com/-biyiyWcJ9MU/URqvKculiAI/AAAAAAAAAbs/jyPsCplJOpE/s160-c/Windmill.jpg",
             "https://lh4.googleusercontent.com/-PDT167_xRdA/URqvK36mLcI/AAAAAAAAAbs/oi2ik9QseMI/s160-c/Windmills.jpg",
             "https://lh5.googleusercontent.com/-kI_QdYx7VlU/URqvLXCB6gI/AAAAAAAAAbs/N31vlZ6u89o/s160-c/Yet%252520Another%252520Rockaway%252520Sunset.jpg",
-            "https://lh4.googleusercontent.com/-e9NHZ5k5MSs/URqvMIBZjtI/AAAAAAAAAbs/1fV810rDNfQ/s160-c/Yosemite%252520Tree.jpg", };
+            "https://lh4.googleusercontent.com/-e9NHZ5k5MSs/URqvMIBZjtI/AAAAAAAAAbs/1fV810rDNfQ/s160-c/Yosemite%252520Tree.jpg",
+
+
+    };
 }
+
+
+

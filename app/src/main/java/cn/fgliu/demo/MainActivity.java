@@ -15,6 +15,7 @@ import cn.fgliu.demo.ui.MsgActivity;
 import cn.fgliu.demo.ui.PhotoWallActivity;
 import cn.fgliu.demo.ui.RefreshActivity;
 import cn.fgliu.demo.ui.RenRenMenuActivity;
+import cn.fgliu.demo.ui.ScannerActivity;
 import cn.fgliu.demo.ui.SliderActivity;
 import cn.fgliu.demo.ui.SlidingSwitcherActivity;
 
@@ -141,6 +142,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, MsgActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 扫描二维码
+        Button scanWindow = (Button) findViewById(R.id.scan_window_but);
+        scanWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, ScannerActivity.class);
                 startActivity(intent);
                 finish();
             }

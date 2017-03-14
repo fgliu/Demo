@@ -252,7 +252,7 @@ public class PhotoWallAdapter extends ArrayAdapter<String> implements OnScrollLi
                 con.setConnectTimeout(5 * 1000);
                 con.setReadTimeout(10 * 1000);
                 con.setDoInput(true);
-                con.setDoOutput(true);
+//                con.setDoOutput(true);
                 bitmap = BitmapFactory.decodeStream(con.getInputStream());
             } catch (Exception e) {
                 e.printStackTrace();

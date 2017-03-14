@@ -9,16 +9,26 @@
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/my_app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/my_app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,7 +65,9 @@
         <activity android:name=".ui.ContactActivity" />
         <activity android:name=".ui.RefreshActivity" />
         <activity android:name=".ui.PhotoWallActivity" />
-        <activity android:name=".ui.MsgActivity"></activity>
+        <activity android:name=".ui.MsgActivity" />
+        <activity android:name=".ui.ScannerActivity" />
+        <activity android:name=".ui.SubCaptureActivity"></activity>
     </application>
 
 </manifest>
