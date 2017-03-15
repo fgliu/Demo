@@ -12,12 +12,16 @@ import cn.fgliu.demo.ui.ContactActivity;
 import cn.fgliu.demo.ui.FragmentActivity;
 import cn.fgliu.demo.ui.FragmentTabActivity;
 import cn.fgliu.demo.ui.MsgActivity;
+import cn.fgliu.demo.ui.NewWallScrollActivity;
 import cn.fgliu.demo.ui.PhotoWallActivity;
+import cn.fgliu.demo.ui.PictureActivity;
 import cn.fgliu.demo.ui.RefreshActivity;
 import cn.fgliu.demo.ui.RenRenMenuActivity;
 import cn.fgliu.demo.ui.ScannerActivity;
 import cn.fgliu.demo.ui.SliderActivity;
 import cn.fgliu.demo.ui.SlidingSwitcherActivity;
+import cn.fgliu.demo.ui.ThreeDActivity;
+import cn.fgliu.demo.ui.WallScrollActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -70,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 图片滚动控件，含页签功能
+        // 顶部滚动banner
         Button topMenuWindow = (Button) findViewById(R.id.switch_menu_window);
         topMenuWindow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 图片滚动控件，含页签功能
+        // 碎片化
         Button frameMenuWindow = (Button) findViewById(R.id.frame_menu_window);
         frameMenuWindow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 图片滚动控件，含页签功能
+        // 底部菜单，含页签功能
         Button tabMenuWindow = (Button) findViewById(R.id.tab_menu_window);
         tabMenuWindow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,5 +162,48 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 旋转特效
+        Button picWindow = (Button) findViewById(R.id.pic_window_but);
+        picWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, PictureActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 3D旋转特效
+        Button threeDWindow = (Button) findViewById(R.id.three_d_but);
+        threeDWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, ThreeDActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 瀑布流
+        Button wallWindow = (Button) findViewById(R.id.wall_but);
+        wallWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, WallScrollActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 加强可滚动瀑布流
+        Button scarWallWindow = (Button) findViewById(R.id.scar_wall_but);
+        scarWallWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, NewWallScrollActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

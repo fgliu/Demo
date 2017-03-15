@@ -7,93 +7,105 @@
 
     <LinearLayout
         android:id="@+id/activity_main"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/start_float_window"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="桌面弹窗" >
-    </Button>
+        <Button
+            android:id="@+id/start_float_window"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="桌面弹窗"></Button>
 
-    <Button
-        android:id="@+id/renren_menu_window"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="简单滑动菜单" >
-    </Button>
+        <Button
+            android:id="@+id/renren_menu_window"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="简单滑动菜单"></Button>
 
-    <Button
-        android:id="@+id/slider_menu_window"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="通用滑动菜单" >
-    </Button>
+        <Button
+            android:id="@+id/slider_menu_window"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="通用滑动菜单"></Button>
 
-    <Button
-        android:id="@+id/both_menu_window"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="双向滑动菜单" >
-    </Button>
+        <Button
+            android:id="@+id/both_menu_window"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="双向滑动菜单"></Button>
 
-    <Button
-        android:id="@+id/switch_menu_window"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="顶部滚动banner" >
-    </Button>
+        <Button
+            android:id="@+id/switch_menu_window"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="顶部滚动banner"></Button>
 
-    <Button
-        android:id="@+id/frame_menu_window"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="碎片化" >
-    </Button>
+        <Button
+            android:id="@+id/frame_menu_window"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="碎片化"></Button>
 
-    <Button
-        android:id="@+id/tab_menu_window"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="底部菜单" >
-    </Button>
+        <Button
+            android:id="@+id/tab_menu_window"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="底部菜单"></Button>
 
-    <Button
-        android:id="@+id/contact_menu_window_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="通讯录" >
-    </Button>
+        <Button
+            android:id="@+id/contact_menu_window_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="通讯录"></Button>
 
-    <Button
-        android:id="@+id/refresh_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="下拉刷新" >
-    </Button>
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="下拉刷新"></Button>
 
-    <Button
-        android:id="@+id/photo_wall_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="照片墙" >
-    </Button>
+        <Button
+            android:id="@+id/photo_wall_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="照片墙"></Button>
 
-    <Button
-        android:id="@+id/msg_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="聊天页面" >
-    </Button>
+        <Button
+            android:id="@+id/msg_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="聊天页面"></Button>
 
-    <Button
-        android:id="@+id/scan_window_but"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="二维码扫描" >
-    </Button>
+        <Button
+            android:id="@+id/scan_window_but"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="二维码扫描"></Button>
+
+        <Button
+            android:id="@+id/pic_window_but"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="旋转特效"></Button>
+
+        <Button
+            android:id="@+id/three_d_but"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="3D旋转特效"></Button>
+
+        <Button
+            android:id="@+id/wall_but"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="瀑布流照片"></Button>
+
+        <Button
+            android:id="@+id/scar_wall_but"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="可滚动瀑布流照片"></Button>
 
     </LinearLayout>
 </ScrollView>
