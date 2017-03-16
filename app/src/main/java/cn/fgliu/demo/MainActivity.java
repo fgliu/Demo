@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 底部菜单，含页签功能
+        // 底部菜单，含页签功能(替换ActivityGroup)
         Button tabMenuWindow = (Button) findViewById(R.id.tab_menu_window);
         tabMenuWindow.setOnClickListener(new View.OnClickListener() {
             @Override
