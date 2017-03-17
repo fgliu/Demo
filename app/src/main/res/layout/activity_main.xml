@@ -107,5 +107,11 @@
             android:layout_height="wrap_content"
             android:text="可滚动瀑布流照片"></Button>
 
+        <Button
+            android:id="@+id/Danmu_but"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="弹幕演示"></Button>
+
     </LinearLayout>
 </ScrollView>

@@ -9,6 +9,7 @@ import android.widget.Button;
 import cn.fgliu.demo.service.FloatWindowService;
 import cn.fgliu.demo.ui.BidirSlidingActivity;
 import cn.fgliu.demo.ui.ContactActivity;
+import cn.fgliu.demo.ui.DanmuActivity;
 import cn.fgliu.demo.ui.FragmentActivity;
 import cn.fgliu.demo.ui.FragmentTabActivity;
 import cn.fgliu.demo.ui.MsgActivity;
@@ -201,6 +202,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, NewWallScrollActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 弹幕视频
+        Button tanmuWindow = (Button) findViewById(R.id.Danmu_but);
+        tanmuWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, DanmuActivity.class);
                 startActivity(intent);
                 finish();
             }

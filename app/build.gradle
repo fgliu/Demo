@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "cn.fgliu.demo"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -20,6 +20,7 @@ android {
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
 }
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
