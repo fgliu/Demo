@@ -1,1 +1,1 @@
-include ':app','zxing'
+include ':app','zxing','ndkbitmap-armv5','ndkbitmap-armv7a','ndkbitmap-x86','DanmakuFlameMaster'
