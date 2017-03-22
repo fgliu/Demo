@@ -2,6 +2,7 @@ package tv.cjump.ndkbitmap_armv5;
 
 import org.junit.Test;
 
+import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.*;
 
 /**

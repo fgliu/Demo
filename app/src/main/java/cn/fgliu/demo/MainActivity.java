@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import cn.fgliu.demo.service.FloatWindowService;
 import cn.fgliu.demo.ui.BidirSlidingActivity;
+import cn.fgliu.demo.ui.CommonActivity;
 import cn.fgliu.demo.ui.ContactActivity;
 import cn.fgliu.demo.ui.DanmuActivity;
 import cn.fgliu.demo.ui.FragmentActivity;
@@ -30,6 +31,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // 公共测试用
+        Button testWindow = (Button) findViewById(R.id.common_window);
+        testWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, CommonActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         // 类似360弹窗的按钮
         Button startFloatWindow = (Button) findViewById(R.id.start_float_window);
